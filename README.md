@@ -30,29 +30,55 @@ Folder: “read-access”, Group: “Domain Users”, Permission: “Read”
 
 Folder: “write-access”,  Group: “Domain Users”, Permissions: “Read/Write”
 
-Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/Write
+Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/WriteNormal domain users are granted permission to only read from the "read-access" group, read and write in the "write-acces" group, and not access the "no-access" group at all. 
+Admin only are allowed permission to access the "no access" group.
+
 
 <h2>Actions and Observations</h2>
 
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p>
+<img src="https://i.imgur.com/HRc9yfM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
-
-<p><img src="https://i.imgur.com/HRc9yfM.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+On DC-1 (domain controller), on the C:\ drive, create 3 folders: “read-access”, “write-access”, “no-access”,
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/yy6bmz8.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Set the following permissions (share the folder) for the “Domain Users” group: Folder: 
+  
+  “read-access”, Group: “Domain Users”, Permission: “Read”
+  
+  Normal domain users are granted permission to only read from the "read-access" group.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/KqbRUVr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Set the following permissions (share the folder) for the “Domain Users” group: Folder:
+  
+ Folder: “write-access”,  Group: “Domain Users”, Permissions: “Read/Write” 
+  
+  Normal domain users are granted permission to  read and write in the "write-acces" group.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/vamyV36.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Set the following permissions (share the folder) for the “Domain Users” group:
+  
+ Folder: “no-access”, Group: “Domain Admins”, “Permissions: “Read/Write 
+  
+  Normal domain users are not granted permission to access the "no-access" group at all.
+  
+  Only Domain Admin are allowed permission to access the "no access" group.
+   
 </p>
 <br />
